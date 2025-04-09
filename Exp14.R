@@ -14,7 +14,7 @@ data <- rbind(data, newrow)
 
 print(data)
 
-data <- data[-4, ]
+data <- data[-3, ]
 
 print(data)
 

@@ -13,3 +13,9 @@ newrow = data.frame(
 data <- rbind(data, newrow)
 
 print(data)
+
+data <- data[-3, ]
+
+print(data)
+
+print(summary(data))

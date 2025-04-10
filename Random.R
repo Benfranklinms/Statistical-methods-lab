@@ -1,9 +1,19 @@
-library(MASS)
+data <- data.frame(
+  name = c("Amiya", "Raj", "Ashish"),
+  language = c("R", "Python", "Java"),
+  age = c(22, 35, 45)
+)
 
-data <- data.frame(Cars93$AirBags, Cars93$Type)
+print(data)
 
-data = table(Cars93$AirBags, Cars93$Type)
+newrow <- data.frame(
+  name = "John",
+  language = "C++",
+  age = 23
+)
 
-result = chisq.test(data)
+data <- rbind(data, newrow)
 
-print(result)
+data <- data[-3, ]
+print(data)
+

@@ -1,10 +1,9 @@
-maths <- c(65, 70, 85, 90, 75)
-science <- c(60, 80, 70, 85, 78)
-english <- c(70, 75, 88, 90, 82)
+library(MASS)
 
-data <- data.frame(Maths = maths, Science = science, English = english)
+data <- data.frame(Cars93$AirBags, Cars93$Type)
 
-boxplot(data,
-        main = "Boxplot of Marks in Subjects",
-        ylab = "Marks",
-        col = c("lightblue", "lightgreen", "lightpink"))
+data = table(Cars93$AirBags, Cars93$Type)
+
+result = chisq.test(data)
+
+print(result)
